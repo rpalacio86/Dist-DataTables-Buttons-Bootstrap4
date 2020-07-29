@@ -38,10 +38,10 @@ var DataTable = $.fn.dataTable;
 $.extend( true, DataTable.Buttons.defaults, {
 	dom: {
 		container: {
-			className: 'dt-buttons btn-group flex-wrap'
+			className: 'dt-buttons flex-wrap'
 		},
 		button: {
-			className: 'btn btn-secondary'
+			className: 'btn'
 		},
 		collection: {
 			tag: 'div',
@@ -56,7 +56,7 @@ $.extend( true, DataTable.Buttons.defaults, {
 	},
 	buttonCreated: function ( config, button ) {
 		return config.buttons ?
-			$('<div class="btn-group"/>').append(button) :
+			$('<div class="dt-buttons"/>').append(button) :
 			button;
 	}
 } );
